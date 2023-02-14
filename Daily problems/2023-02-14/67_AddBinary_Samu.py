@@ -50,7 +50,5 @@ class Solution(object):
 s = Solution()
 r = s.addBinary("1100", "1")
 print(r, r=="1101")
-r = s.addBinary("1010", "1011")
-print(r, r=="10101")
 r = s.addBinary("1000101010", "111010101101")
 print(r, r == "1000011010111")
