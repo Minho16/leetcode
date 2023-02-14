@@ -10,6 +10,10 @@ class Solution(object):
         la= len(a)
         lb= len(b)
         s = ''
+        if lb > la:
+            la, lb = lb, la
+            a, b = b, a
+
         while i <= la or i <= lb:
             if i <= la and i <= lb:
                 r = ''
@@ -35,21 +39,7 @@ class Solution(object):
                     r = '0'
                     carry = 1
                 else:
-                    r = '1'
-                
-            else:
-                r = ''
-                if b[-i] == '0' and carry:
-                    r = '1'
-                    carry = 0
-                elif b[-i] == '0':
-                    r = '0'
-                elif b[-i] == '1'  and carry:
-                    r = '0'
-                    carry = 1
-                else:
-                    r = '1'
-                
+                    r = '1'                
             s = r + s
             i += 1
         if carry:
@@ -58,7 +48,7 @@ class Solution(object):
 
 
 s = Solution()
-r = s.addBinary("11", "1")
-print(r, r=="100")
+r = s.addBinary("1100", "1")
+print(r, r=="1101")
 r = s.addBinary("1010", "1011")
 print(r, r=="10101")
