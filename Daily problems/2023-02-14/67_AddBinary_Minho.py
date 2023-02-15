@@ -6,5 +6,5 @@ class Solution:
         return bin(total_sum)[2:]
 
 '''
-    This is a test Samu, do you have calocha?
+    Testing which user appears when a commit is done
 '''
