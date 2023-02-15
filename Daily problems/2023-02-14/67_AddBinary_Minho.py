@@ -5,6 +5,9 @@ class Solution:
         total_sum = a_num + b_num
         return bin(total_sum)[2:]
 
-'''
-    Testing which user appears when a commit is done
-'''
+s = Solution()
+r = s.addBinary("1100", "1")
+print(r, r=="1101")
+r = s.addBinary("1010", "1011")
+print(r, r=="10101")
+n
