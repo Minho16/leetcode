@@ -10,4 +10,3 @@ r = s.addBinary("1100", "1")
 print(r, r=="1101")
 r = s.addBinary("1010", "1011")
 print(r, r=="10101")
-n
