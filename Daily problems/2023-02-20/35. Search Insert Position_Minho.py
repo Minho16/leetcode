@@ -24,28 +24,15 @@ class Solution:
         
         else: # binary search here
             start, end = 0, len(nums)-1
-            found = False
 
-            while not found:
+            while (start <= end):
 
-                mid_point = (end-start) // 2
+                mid_point = (start + end) // 2
 
                 if target == nums[mid_point]:
-                    found = True
                     return mid_point
+                elif nums[mid_point] > target:
+                    end = mid_point - 1
                 else:
-                    if target > nums[mid_point]:
-                        start = mid_point - 1
-                    elif target < nums[mid_point]:
-                        end = mid_point + 1
-
-
-s = Solution()
-
-nums = [1,3,5,6] 
-target = 2
-
-print(s.searchInsert(nums, target))
-
-
-
+                    start = mid_point + 1
+            return start
