@@ -33,7 +33,42 @@ class Solution:
                 prev = s[i]
         return max_l
 
-        # Complexity n Solution
+    # Complexity O(n) Solution
+    def characterReplacement(self, s: str, k: int) -> int:
+        # Let's study the cases
+        # -Create a dictionary of size k
+        #       max_l will be k
+        # - While moving to the end:
+        #       keep adding elements to the dict to the right 
+        # - If no k is available move to the right and remove one from the dictionary
+
+
+
+        # Create a diccionary of size k
+        rem_k = k
+        n = len(s)
+
+        # variable
+        abc = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+        char_index = {}
+        for i, l in enumerate(abc):
+            char_index[l] = i
+
+        char_list_values = [0]*n
+
+        i = 0
+        while i < n and rem_k > 0:
+            char_list_values[char_index[s[i]]] += 1
+            k -= 1
+        if i == n:
+            return n
+        
+
+        
+
+
+
+        return 
 
 # Test empty s
 # Use test cases for the last position of the string
