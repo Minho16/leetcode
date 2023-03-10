@@ -11,7 +11,6 @@ class Solution:
     def detectCycle(self, head: Optional[ListNode]) -> Optional[ListNode]:
         node_to_return = None
         key_id_node_value_node_dict = {}
-        found = False
 
         while head:
 
