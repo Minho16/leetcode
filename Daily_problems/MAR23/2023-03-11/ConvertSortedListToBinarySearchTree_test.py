@@ -31,6 +31,7 @@ from ConvertSortedListToBinarySearchTree_Samu import Solution, ListNode, TreeNod
 def test_sortedListToBST():
     solution = Solution()
 
+    # Test case 1: Input linked list with 3 elements
     head = ListNode(1)
     head.next = ListNode(2)
     head.next.next = ListNode(3)
