@@ -21,9 +21,3 @@ class Solution:
                         elif order_dict[char] < order_dict[words[idx + 1][i]]:
                             break
             return True
-
-
-s = Solution()
-words = ["hello", "leetcode"]
-order = "hlabcdefgijkmnopqrstuvwxyz"
-print(s.isAlienSorted(words, order))

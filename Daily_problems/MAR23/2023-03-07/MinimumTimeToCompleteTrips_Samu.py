@@ -1,5 +1,5 @@
-from typing import List
 import time
+from typing import List
 
 
 class Solution:

@@ -1,5 +1,5 @@
-from SpiralMatrix_Samu import Solution
 import pytest
+from SpiralMatrix_Samu import Solution
 
 
 class TestSolution:

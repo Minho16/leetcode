@@ -1,5 +1,6 @@
 from typing import Optional
-from ConvertSortedListToBinarySearchTree_Samu import Solution, ListNode, TreeNode
+
+from ConvertSortedListToBinarySearchTree_Samu import ListNode, Solution, TreeNode
 
 
 class TestSolution:
