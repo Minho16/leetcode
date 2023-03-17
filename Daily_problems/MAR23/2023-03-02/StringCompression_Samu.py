@@ -1,4 +1,6 @@
 from typing import List
+
+
 class Solution:
     # O(n) complexity solutions. (Runtime: 56 ms (89.16%) | Memory: 13.9 MB (96.87%))
     def compress(self, chars: List[str]) -> int:
@@ -13,7 +15,7 @@ class Solution:
             else:
                 insert_counter = counter
                 chars[new_pos] = current_char
-                current_char = chars[min(len(chars)-1, i)]
+                current_char = chars[min(len(chars) - 1, i)]
                 counter = 1
                 if insert_counter == 1:
                     new_pos += 1
@@ -28,13 +30,12 @@ class Solution:
         return len(chars)
 
 
-
 s = Solution()
 chars = ["a"]
 r = s.compress(chars)
-print(r, r==6)
+print(r, r == 6)
 
 
-chars = ["a","b","b","b","b","b","b","b","b","b","b","b","b"]
+chars = ["a", "b", "b", "b", "b", "b", "b", "b", "b", "b", "b", "b", "b"]
 r = s.compress(chars)
-print(r, r==4)
+print(r, r == 4)

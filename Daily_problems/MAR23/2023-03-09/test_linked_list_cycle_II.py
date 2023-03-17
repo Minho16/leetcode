@@ -1,10 +1,13 @@
 from Linked_List_Cycle_II_Minho import Solution
+
 # from LinkedListCycleII_Samu import Solution
+
 
 class ListNode:
     def __init__(self, x):
         self.val = x
         self.next = None
+
 
 class TestSolution:
     def test_detectCycle_with_cycle(self):

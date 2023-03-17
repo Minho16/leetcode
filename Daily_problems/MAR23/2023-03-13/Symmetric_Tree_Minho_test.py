@@ -2,7 +2,6 @@ from Symmetric_Tree_Minho import Solution, TreeNode
 
 
 def test_isSymmetric():
-
     # Test case 1: Symmetric tree
     solution = Solution()
     root = TreeNode(1)

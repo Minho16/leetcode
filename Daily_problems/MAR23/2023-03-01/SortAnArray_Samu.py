@@ -1,4 +1,6 @@
 from typing import List
+
+
 class Solution:
     def sortArray(self, nums: List[int]) -> List[int]:
         def quicksort(nums):
@@ -10,8 +12,8 @@ class Solution:
                 else:
                     return [nums[1], nums[0]]
             n = len(nums)
-            l = quicksort(nums[0:n//2])
-            r = quicksort(nums[n//2:])
+            l = quicksort(nums[0 : n // 2])
+            r = quicksort(nums[n // 2 :])
             s = []
             i = 0
             j = 0
@@ -30,9 +32,10 @@ class Solution:
                     s.append(r[j])
                     j += 1
             return s
+
         r = quicksort(nums)
         return r
 
 
 s = Solution()
-r = s.sortArray([8,7,6,5,3,2,1])
+r = s.sortArray([8, 7, 6, 5, 3, 2, 1])

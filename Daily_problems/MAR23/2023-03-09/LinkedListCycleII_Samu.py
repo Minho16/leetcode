@@ -20,7 +20,6 @@ class Solution(object):
                     slow = slow.next
                 return check
         return None
-    
 
     # 04-11-2022 Version
     def detectCycle(self, head):
@@ -34,7 +33,7 @@ class Solution(object):
         counter = -1
         if not slow or not slow.next:
             return None
-        while fast.next and  slow.next and fast.next.next and counter == -1:
+        while fast.next and slow.next and fast.next.next and counter == -1:
             if slow.next == fast.next.next:
                 slow = slow.next
                 fast = fast.next.next
@@ -49,10 +48,10 @@ class Solution(object):
             slow = head
             while slow.next:
                 fast = slow
-                for i in range(counter+1):
+                for i in range(counter + 1):
                     fast = fast.next
                 if fast == slow:
                     return slow
-                slow = slow.next        
+                slow = slow.next
             return head.next
         return None

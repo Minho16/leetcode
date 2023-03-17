@@ -6,7 +6,7 @@ class Solution:
         left = max(weights)
         right = sum(weights)
         while left < right:
-            mid = left + (right-left)//2
+            mid = left + (right - left) // 2
             can = True
             d = 1
             t = 0
@@ -24,12 +24,13 @@ class Solution:
                 left = mid + 1
         return left
 
+
 s = Solution()
-r = s.shipWithinDays([1,2,3,4,5,6,7,8,9,10], 5)
-print(r, r==15)
+r = s.shipWithinDays([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 5)
+print(r, r == 15)
 
-r = s.shipWithinDays([3,2,2,4,1,4], 3)
-print(r, r==6)
+r = s.shipWithinDays([3, 2, 2, 4, 1, 4], 3)
+print(r, r == 6)
 
-r = s.shipWithinDays([1,2,3,1,1], 4)
-print(r, r==3)
+r = s.shipWithinDays([1, 2, 3, 1, 1], 4)
+print(r, r == 3)

@@ -6,24 +6,23 @@ class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
         self.next = next
+
+
 class Solution:
     def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
-        
-        # add the values of linked list 
+        # add the values of linked list
         node_values_list = []
 
         while head:
             node_values_list.append(head.val)
             head = head.next
-        
+
         # remove the corresponding index
         node_values_list.pop(len(node_values_list) - n)
-
 
         # How to return an empty ListNode?
         if node_values_list == []:
             return None
-        
 
         # Create a new linked_list with node_values_list
         head_new = ListNode(val=node_values_list[-1])
@@ -46,7 +45,7 @@ class Solution:
 #         # advance fast to nth position
 #         for i in range(n):
 #             fast = fast.next
-            
+
 #         if not fast:
 #             return head.next
 #         # then advance both fast and slow now they are nth postions apart
@@ -92,4 +91,3 @@ def test_removeNthFromEnd():
         values.append(result.val)
         result = result.next
     assert values == [2, 3, 4, 5]
-

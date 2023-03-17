@@ -1,7 +1,7 @@
 class Trie:
     def __init__(self):
         self.word_dict = {}
-        
+
     def insert(self, word: str) -> None:
         first_letter = word[0]
         if first_letter in self.word_dict.keys():

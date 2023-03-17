@@ -7,9 +7,9 @@
 class Solution:
     def __init__(self):
         self.depth = 0
-    
+
     def maxDepth(self, root: Optional[TreeNode]) -> int:
-        count = 0        
+        count = 0
         if root == None:
             return self.depth
         self.DFS(root, count)
@@ -23,4 +23,3 @@ class Solution:
         count += 1
         self.DFS(node.left, count)
         self.DFS(node.right, count)
-        

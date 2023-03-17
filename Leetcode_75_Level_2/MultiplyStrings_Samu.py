@@ -6,7 +6,9 @@ class Solution:
             s = 0
             n = int(num)
             for c in num1:
-                s = s*10+n*int(c)
-            t = t*10 +s
+                s = s * 10 + n * int(c)
+            t = t * 10 + s
         return str(t)
-print(Solution().multiply('123', '456'))
+
+
+print(Solution().multiply("123", "456"))

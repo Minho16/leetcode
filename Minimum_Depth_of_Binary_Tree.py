@@ -7,24 +7,25 @@
 
 from collections import deque
 
+
 class Solution:
     def minDepth(self, root) -> int:
-        '''
-            strategy: start with count level = 1
-            stop when node == None --> 
-        '''
-        queue = deque([(root, 1)]) # node and level information
+        """
+        strategy: start with count level = 1
+        stop when node == None -->
+        """
+        queue = deque([(root, 1)])  # node and level information
 
         while queue:
             node, curr_depth = queue.popleft()
 
             if node is None:
                 continue
-            
+
             if node.left is None and node.right is None:
                 return curr_depth
-            
-            queue.append((node.left, curr_depth+1))
-            queue.append((node.right, curr_depth+1))
-        
+
+            queue.append((node.left, curr_depth + 1))
+            queue.append((node.right, curr_depth + 1))
+
         return 0
