@@ -4,6 +4,7 @@ class TreeNode:
         self.left = left
         self.right = right
 
+
 class Solution:
     def isSymmetric(self, root) -> bool:
         if not root:
@@ -17,7 +18,9 @@ class Solution:
             return False
         if leftroot.val != rightroot.val:
             return False
-        return self.isSame(leftroot.left, rightroot.right) and self.isSame(leftroot.right, rightroot.left)
+        return self.isSame(leftroot.left, rightroot.right) and self.isSame(
+            leftroot.right, rightroot.left
+        )
 
 
 def test_isSymmetric():

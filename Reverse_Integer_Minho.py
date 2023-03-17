@@ -1,10 +1,10 @@
 class Solution:
     def reverse(self, x: int) -> int:
         str_x = str(x)
-        neg_sym = ''
-        
-        if str_x[0] == '-':
-            neg_sym = '-'
+        neg_sym = ""
+
+        if str_x[0] == "-":
+            neg_sym = "-"
             str_x = str_x[1:]
 
         str_x = str_x[::-1]

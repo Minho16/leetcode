@@ -3,6 +3,7 @@ class ListNode:
         self.val = val
         self.next = next
 
+
 class Solution:
     def removeNthFromEnd(self, head: ListNode, n: int) -> ListNode:
         fast = head
@@ -10,7 +11,7 @@ class Solution:
         # advance fast to nth position
         for i in range(n):
             fast = fast.next
-            
+
         if not fast:
             return head.next
         # then advance both fast and slow now they are nth postions apart

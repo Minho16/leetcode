@@ -5,9 +5,9 @@ class TreeNode:
         self.left = left
         self.right = right
 
+
 class Solution:
     def isCompleteTree(self, root) -> bool:
-
         bfs = [root]
         i = 0
         while bfs[i]:
@@ -15,4 +15,3 @@ class Solution:
             bfs.append(bfs[i].right)
             i += 1
         return not any(bfs[i:])
-    

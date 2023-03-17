@@ -5,20 +5,22 @@ class TreeNode(object):
         self.left = left
         self.right = right
 
+
 class Solution:
     # Linear complexity O(1) space -> Results in LeetCode tests are not that good.
     def __init__(self):
         self.previous = None
-        self.min = float('inf')
-        
+        self.min = float("inf")
+
     def minDiffInBST(self, root: TreeNode) -> int:
         self.inOrder(root)
         return self.min
-    # Traversal Order  
+
+    # Traversal Order
     def inOrder(self, root: TreeNode) -> None:
         if not root:
             return
-        
+
         self.inOrder(root.left)
         if self.previous:
             self.min = min(self.min, root.val - self.previous.val)

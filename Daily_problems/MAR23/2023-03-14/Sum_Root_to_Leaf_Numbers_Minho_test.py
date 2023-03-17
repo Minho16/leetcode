@@ -1,7 +1,7 @@
 from Sum_Root_to_Leaf_Numbers_Minho import Solution, TreeNode
 
-def test_sumNumbers():
 
+def test_sumNumbers():
     # Test for empty tree
     s = Solution()
     root = None
@@ -28,4 +28,3 @@ def test_sumNumbers():
 
     result = s.sumNumbers(root)
     assert result == 1026
-

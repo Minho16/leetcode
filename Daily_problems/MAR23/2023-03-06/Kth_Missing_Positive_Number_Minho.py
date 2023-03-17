@@ -8,13 +8,13 @@ class Solution:
                 k -= 1
             else:
                 i += 1
-        
+
         if k != 0:
             count += k
 
         return count
-    
-        '''
+
+        """
         worse method
 
         all_numbers_list = [i for i in range(1, arr[-1] + k + 1)]
@@ -22,4 +22,4 @@ class Solution:
 
         return diff_list[k-1]
 
-        '''
+        """

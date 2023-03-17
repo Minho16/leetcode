@@ -1,43 +1,45 @@
 from Implement_Trie_Prefix_Tree_Minho import Trie
 
+
 def test_trie_insert_and_search():
     trie = Trie()
-    
+
     trie.insert("apple")
     trie.insert("banana")
     trie.insert("applepie")
     trie.insert("bear")
     trie.insert("blueberry")
-    
-    assert trie.search("apple") == True
-    assert trie.search("banana") == True
-    assert trie.search("applepie") == True
-    assert trie.search("bear") == True
-    assert trie.search("blueberry") == True
-    
-    assert trie.search("app") == False
-    assert trie.search("ban") == False
-    assert trie.search("bat") == False
-    assert trie.search("bea") == False
-    assert trie.search("blue") == False
+
+    assert trie.search("apple")
+    assert trie.search("banana")
+    assert trie.search("applepie")
+    assert trie.search("bear")
+    assert trie.search("blueberry")
+
+    assert not trie.search("app")
+    assert not trie.search("ban")
+    assert not trie.search("bat")
+    assert not trie.search("bea")
+    assert not trie.search("blue")
+
 
 def test_trie_startsWith():
     trie = Trie()
-    
+
     trie.insert("apple")
     trie.insert("banana")
     trie.insert("applepie")
     trie.insert("bear")
     trie.insert("blueberry")
-    
-    assert trie.startsWith("app") == True
-    assert trie.startsWith("ban") == True
-    assert trie.startsWith("a") == True
-    assert trie.startsWith("b") == True
-    assert trie.startsWith("blu") == True
-    
-    assert trie.startsWith("bat") == False
-    assert trie.startsWith("be") == True
-    assert trie.startsWith("c") == False
-    assert trie.startsWith("d") == False
-    assert trie.startsWith("z") == False
+
+    assert trie.startsWith("app")
+    assert trie.startsWith("ban")
+    assert trie.startsWith("a")
+    assert trie.startsWith("b")
+    assert trie.startsWith("blu")
+
+    assert not trie.startsWith("bat")
+    assert trie.startsWith("be")
+    assert not trie.startsWith("c")
+    assert not trie.startsWith("d")
+    assert not trie.startsWith("z")

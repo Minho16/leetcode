@@ -1,5 +1,7 @@
 # 19. Remove Nth Node From End of List
 from typing import Optional
+
+
 # Definition for singly-linked list.
 class ListNode:
     def __init__(self, val=0, next=None):
@@ -15,7 +17,7 @@ class Solution:
         while copy:
             copy = copy.next
             c += 1
-        iter = c-n
+        iter = c - n
         copy = head
         # Fill the linked list
         while copy:

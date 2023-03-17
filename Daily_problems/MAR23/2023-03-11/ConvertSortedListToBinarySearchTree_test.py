@@ -1,6 +1,7 @@
 from typing import Optional
 from ConvertSortedListToBinarySearchTree_Samu import Solution, ListNode, TreeNode
 
+
 class TestSolution:
     def test_detectCycle_with_cycle(self):
         # create an instance of the Solution class
@@ -34,7 +35,11 @@ class TestSolution:
             return True
         if p is None or q is None:
             return False
-        return p.val == q.val and self.is_same_tree(p.left, q.left) and self.is_same_tree(p.right, q.right)
+        return (
+            p.val == q.val
+            and self.is_same_tree(p.left, q.left)
+            and self.is_same_tree(p.right, q.right)
+        )
 
 
 def test_sortedListToBST():
