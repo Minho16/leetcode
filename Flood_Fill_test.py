@@ -8,7 +8,8 @@ def test_floodFill():
     sr = 1
     sc = 1
     color = 2
-    assert sol.floodFill(image, sr, sc, color) == [[2, 2, 2], [2, 2, 0], [2, 0, 1]]
+    assert sol.floodFill(
+        image, sr, sc, color) == [[2, 2, 2], [2, 2, 0], [2, 0, 1]]
 
     # Test case 2
     sol = Solution()

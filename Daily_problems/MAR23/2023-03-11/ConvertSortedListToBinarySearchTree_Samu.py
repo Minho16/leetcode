@@ -19,48 +19,53 @@ class TreeNode:
 
 class Solution:
     def __init__(self) -> None:
-        self.nodelist = []
+        self.nodelist: list[ListNode] = []
 
     # Recursive method to create the binary tree using recursion.
-    # This version saves the list as a global variable and only passes the index at recursion
+    # This version saves the list as a global variable and
+    # only passes the index at recursion
     def sortedListToBST(self, head: Optional[ListNode]) -> Optional[TreeNode]:
         while head:
             self.nodelist.append(head.val)
             head = head.next
 
-        def recursive(l, r):
-            if r - l <= 0:
+        def recursive(left, right):
+            if right - left <= 0:
                 return
-            if r - l == 1:
-                return TreeNode(self.nodelist[l], None, None)
-            value = self.nodelist[l + (r - l) // 2]
+            if right - left == 1:
+                return TreeNode(self.nodelist[left], None, None)
+            value = self.nodelist[left + (right - left) // 2]
             return TreeNode(
                 value,
-                recursive(l, l + (r - l) // 2),
-                recursive(l + (r - l) // 2 + 1, r),
+                recursive(left, left + (right - left) // 2),
+                recursive(left + (right - left) // 2 + 1, right),
             )
 
         result = recursive(0, len(self.nodelist))
         return result
 
-    # This second version passes the actual list so it should be less efficient in terms of
-    # memory allocation. Leetcode tests, though, shows that the complexity is the same.
+    # This second version passes the actual list so it
+    # should be less efficient in terms of
+    # memory allocation. Leetcode tests, though,
+    # shows that the complexity is the same.
     def sortedListToBST2(self, head: Optional[ListNode]) -> Optional[TreeNode]:
-        l = []
+        left = []
         while head:
-            l.append(head.val)
+            left.append(head.val)
             head = head.next
 
-        def recursive(l):
-            sz = len(l)
+        def recursive(left):
+            sz = len(left)
             if sz == 0:
                 return
             if sz == 1:
-                return TreeNode(l[0], None, None)
-            value = l[sz // 2]
-            return TreeNode(value, recursive(l[: sz // 2]), recursive(l[sz // 2 + 1 :]))
+                return TreeNode(left[0], None, None)
+            value = left[sz // 2]
+            return TreeNode(value,
+                            recursive(left[: sz // 2]),
+                            recursive(left[sz // 2 + 1:]))
 
-        return recursive(l)
+        return recursive(left)
 
 
 node1 = ListNode(-10)
@@ -74,4 +79,4 @@ node3.next = node4
 node4.next = node5
 
 s = Solution()
-r = s.sortedListToBST(node1)
+right = s.sortedListToBST(node1)

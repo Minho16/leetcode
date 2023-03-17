@@ -9,7 +9,7 @@ class ListNode:
 
 
 class Solution:
-    def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
+    def removeNthFromEnd(self, head: Optional[ListNode], n: int):
         # add the values of linked list
         node_values_list = []
 
