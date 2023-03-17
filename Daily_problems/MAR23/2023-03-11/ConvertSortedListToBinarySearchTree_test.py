@@ -1,7 +1,11 @@
+from typing import Optional
 from ConvertSortedListToBinarySearchTree_Samu import Solution, ListNode, TreeNode
 
 class TestSolution:
     def test_detectCycle_with_cycle(self):
+        # create an instance of the Solution class
+        solution = Solution()
+
         # create a linked list with a cycle
         node1 = ListNode(-10)
         node2 = ListNode(-3)
@@ -19,14 +23,19 @@ class TestSolution:
         tree9 = TreeNode(9, tree5, None)
         tree0 = TreeNode(0, tree3, tree9)
 
-        # create an instance of the Solution class
-        solution = Solution()
-
         # call the detectCycle function
         result = solution.sortedListToBST(node1)
 
         # check that the result is tree0
-        assert result == tree0
+        assert self.is_same_tree(result, tree0)
+
+    def is_same_tree(self, p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:
+        if p is None and q is None:
+            return True
+        if p is None or q is None:
+            return False
+        return p.val == q.val and self.is_same_tree(p.left, q.left) and self.is_same_tree(p.right, q.right)
+
 
 def test_sortedListToBST():
     solution = Solution()
