@@ -1,3 +1,4 @@
+# 1472. Design Browser History
 class BrowserHistory:
 
     def __init__(self, homepage: str):
